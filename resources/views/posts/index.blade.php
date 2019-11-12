@@ -16,6 +16,10 @@
           <p class="card-text">
             {!! nl2br(e(Str::limit($post->body,200)))!!}
           </p>
+
+          <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
+            続きを読む
+          </a>
         </div>
         <div class="card-footer">
           <span class="mr-2">
@@ -31,4 +35,5 @@
       </div>
     @endforeach
   </div>
+  
 @endsection
