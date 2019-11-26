@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+
   <div class="container mt-4">
     <div class="mb-4">
       <a href="{{route('posts.create')}}" class="btn btn-primary">
@@ -10,7 +11,7 @@
     @foreach($posts as $post)
       <div class="card mb-4">
         <div class ="card-header">
-          {{ $post->title}}
+          {{ $post->title }}
         </div>
         <div class="card-body">
           <p class="card-text">
@@ -25,7 +26,6 @@
           <span class="mr-2">
             投稿日時{{$post->created_at->format('Y.m.d')}}
           </span>
-
           @if($post->comments->count())
             <span class="badge-primary">
               コメント{{$post->comments->count()}}件
