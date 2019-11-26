@@ -9,7 +9,6 @@
 
       <form method="POST" action="{{route('posts.store')}}">
         @csrf
-
         <fieldset class="mb-4">
           <div class="form-group">
             <label for="title">
@@ -32,7 +31,7 @@
 
           <div class="form-group">
             <lavel for="body">
-          　  本文
+              本文
             </label>
 
             <textarea
