@@ -13,6 +13,7 @@
                 action="{{ route('posts.destroy', ['post' => $post]) }}"
             >
               @csrf
+              
               @method('DELETE')
 
                 <button class="btn btn-danger">削除する</button>
